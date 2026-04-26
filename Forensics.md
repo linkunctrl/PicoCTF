@@ -47,8 +47,6 @@ The file contained base64-encoded data that, when decoded, produced an image wit
    ```
 4. Convert hex to ASCII (CyberChef: **From Hex**) to get the flag.
 
-### Flag
-`picoCTF{forensics_analysis_is_amazing_b9ac4cb9}`
 
 ---
 
