@@ -60,20 +60,22 @@ b4,b,lsb,xy         .. file: 0421 Alliant compact executable not strippe
 
 ## Verify:
 It just needed a script to run each file in the files folder through the decrypt script however nano and mousepad could not be used so used cat with a heredoc:
-`cat > solve.sh << 'EOF'`
-`#!/bin/bash`
-`for file in /home/ctf-player/drop-in/files/*; do`
-    `filename=$(basename "$file")`
-    `echo "Trying: $filename"`
-    `result=$(./decrypt.sh "files/$filename" 2>/dev/null)`
-    `if echo "$result" | grep -q "picoCTF{"; then`
-        `echo "FLAG FOUND in $filename:"`
-        `echo "$result"`
-        `break`
-    `fi`
-`done`
-`echo "Done."`
-`EOF`
+
+cat > solve.sh << 'EOF'
+#!/bin/bash
+for file in /home/ctf-player/drop-in/files/*; do
+    filename=$(basename "$file")
+    echo "Trying: $filename"
+    result=$(./decrypt.sh "files/$filename" 2>/dev/null)
+    if echo "$result" | grep -q "picoCTF{"; then
+        echo "FLAG FOUND in $filename:"
+        echo "$result"
+        break
+    fi
+done
+echo "Done."
+EOF
+
 - Note: remember to make the .sh file executable with `chmod +x solve.sh`
 
 ## Timeline 0:
