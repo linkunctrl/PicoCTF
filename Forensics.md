@@ -61,6 +61,7 @@ b4,b,lsb,xy         .. file: 0421 Alliant compact executable not strippe
 ## Verify:
 It just needed a script to run each file in the files folder through the decrypt script however nano and mousepad could not be used so used cat with a heredoc:
 
+```bash
 cat > solve.sh << 'EOF'
 #!/bin/bash
 for file in /home/ctf-player/drop-in/files/*; do
@@ -74,7 +75,8 @@ for file in /home/ctf-player/drop-in/files/*; do
     fi
 done
 echo "Done."
-EOF
+EOF 
+``` 
 
 - Note: remember to make the .sh file executable with `chmod +x solve.sh`
 
