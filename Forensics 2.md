@@ -68,6 +68,4 @@ a flag.txt exists in the mounted image
 	picoCTF{B1tl0ck3r_dr1v3_d3crypt3d_9029ae5b}  
 	picoCTF{B1tl0ck3r_dr1v3_d3crypt3d_9029ae5b}  
 	picoCTF{B1tl0ck3r_dr1v3_d3crypt3d_9029ae5b}
-I'm pretty sure this is not how they intended us to solve it but oh well
 
-## Blast from the past:
